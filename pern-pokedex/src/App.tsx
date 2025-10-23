@@ -7,11 +7,11 @@ import useFavoritos from "./features/cuadricula/hooks/useFavoritos";
 
 function App() {
   const [preview, setPreview] = useState<Pokemon | null>(null)
-  const {toggleFav, agregar} =  useFavoritos()
+  // const {toggleFav, agregar} =  useFavoritos()
   const handlePokemon = (p: Pokemon) => {
     setPreview(p);
-    toggleFav(p);
-    agregar.mutate()
+    // toggleFav(p);
+    // agregar.mutate()
   }
   return (
 

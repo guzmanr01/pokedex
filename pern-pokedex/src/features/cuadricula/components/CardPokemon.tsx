@@ -25,7 +25,7 @@ export default function CardPokemon({ pokemon, callback, isFav=false, callbackBu
       <h2>{nombre.toUpperCase()}</h2>
       <img src={imagen} alt={nombre} />
  
-      <ActionIcon onClick={() => callbackButton}
+      <ActionIcon onClick={() => {if(callbackButton) callbackButton(pokemon)}}
         variant={!isFav ? 'outline' : ''}
         size="sm">
         <IconHeart />

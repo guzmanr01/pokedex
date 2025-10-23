@@ -25,7 +25,10 @@ export default function Cuadricula({ callback }: CuadriculaProps) {
 
   const addFavorito = async (pokemon: Pokemon) =>{
     toggleFav(pokemon);
-    await agregar.mutateAsync(); 
+    await agregar.mutateAsync();
+    if (callback) {
+      callback(pokemon);
+    }
   }
 
   if (isLoading) return <div>Cargando...</div>;

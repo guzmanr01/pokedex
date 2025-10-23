@@ -1,7 +1,7 @@
 
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Input, Modal, Notification, Switch } from '@mantine/core'
-import { useEffect, useState } from 'react'
+import { Input, Modal, Switch } from '@mantine/core'
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { useCrearUsuario, useIniciarSesion } from '../../pokemonDetalles/hooks/useRegistro'
