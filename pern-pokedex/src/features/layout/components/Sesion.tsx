@@ -1,6 +1,7 @@
 import { Avatar, Menu } from "@mantine/core";
 import { useState } from "react";
 import ModalSesion from "./ModalSesion";
+import { useUserStore } from "../store/useStore";
 
 export default function Sesion() {
     const [modal, setModal] = useState(false)
@@ -38,7 +39,18 @@ export default function Sesion() {
                                 }
                             }}
                         >
-                            Iniciar Sesión
+                            Iniciar sesion
+                            {/* function Counter() {
+                            const { count, inc } = useStore()
+                            return (
+                                <div>
+                                <span>{count}</span>
+                                <button onClick={inc}>one up</button>
+                                </div>
+                            )
+                            } */}
+
+
                         </Menu.Item>
                     </Menu.Dropdown>
                 </Menu>

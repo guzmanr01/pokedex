@@ -23,7 +23,8 @@
         "react-hook-form": "^7.65.0",
         "tabler": "^1.0.0",
         "tailwindcss": "^4.1.14",
-        "zod": "^4.1.12"
+        "zod": "^4.1.12",
+        "zustand": "^5.0.8"
     },
     "devDependencies": {
         "@eslint/js": "^9.19.0",
