@@ -1,6 +1,6 @@
 import { ActionIcon } from "@mantine/core";
 import type { Pokemon } from "../interfaces/Pokemon.interface";
-import { IconHeart } from "@tabler/icons-react";
+import { IconHeart, IconWalk } from "@tabler/icons-react";
 import useFavoritos from "../hooks/useFavoritos";
 
 interface CardPokemonProps {
@@ -8,9 +8,10 @@ interface CardPokemonProps {
   isFav?: boolean
   callback?: (pokemon: Pokemon) => void,
   callbackButton?: (pokemon: Pokemon) => void
+  callbackE?: (pokemon: Pokemon) => void
 }
 
-export default function CardPokemon({ pokemon, callback, isFav=false, callbackButton }: CardPokemonProps) {
+export default function CardPokemon({ pokemon, callback, isFav=false, callbackButton, callbackE }: CardPokemonProps) {
   // const {agregar} =  useFavoritos()
   const { nombre, imagen } = pokemon;
 
@@ -29,6 +30,11 @@ export default function CardPokemon({ pokemon, callback, isFav=false, callbackBu
         variant={!isFav ? 'outline' : ''}
         size="sm">
         <IconHeart />
+      </ActionIcon>
+ 
+      <ActionIcon onClick={() => {if(callbackE) callbackE(pokemon)}}
+        size="sm">
+        <IconWalk />
       </ActionIcon>
     </div>
   );

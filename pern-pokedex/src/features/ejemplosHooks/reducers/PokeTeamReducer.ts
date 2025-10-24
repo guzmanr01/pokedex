@@ -3,14 +3,14 @@ import type { Pokemon } from "../../cuadricula/interfaces/Pokemon.interface";
 
 
 interface EstadoEquipo {
-    equipo: PokemonReducer[],
-    pokemonActivo: PokemonReducer['id'] | null
+    equipo: PokemonTeam[],
+    pokemonActivo: PokemonTeam['id'] | null
     enBatalla: boolean
 }
 
-export interface PokemonReducer extends PokemonSimple {
-    vida: number
-}
+// export interface PokemonReducer extends PokemonSimple {
+//     vida: number
+// }
 
 export interface PokemonTeam extends Pokemon {
     vida: number
@@ -24,9 +24,9 @@ export const estadoInicial: EstadoEquipo = {
 }
 
 
-type ActionTypes = | { type: "AGREGAR_POKEMON", payload: PokemonReducer }
-    | { type: "REMOVER_POKEMON", payload: PokemonReducer['id'] }
-    | { type: "SELECCIONAR_POKEMON_ACTIVO", payload: PokemonReducer['id'] }
+type ActionTypes = | { type: "AGREGAR_POKEMON", payload: PokemonTeam }
+    | { type: "REMOVER_POKEMON", payload: PokemonTeam['id'] }
+    | { type: "SELECCIONAR_POKEMON_ACTIVO", payload: PokemonTeam['id'] }
     | { type: "INICIAR_BATALLA" }
     | { type: "TERMINAR_BATALLA" }
 
